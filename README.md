@@ -2,6 +2,9 @@
 
 This is a basic example showing how to use [cornerstrone.js](https://github.com/cornerstonejs/cornerstone) library along with React.js to show DICOM images.
 
+## Live demo
+https://shalkam.github.io/react-cornerstone-example/
+
 ## Development
 
 ### Clone the repository
