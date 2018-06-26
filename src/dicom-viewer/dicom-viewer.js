@@ -61,16 +61,11 @@ class DicomViewer extends React.Component {
       cornerstoneTools.rectangleRoi.enable(element);
       cornerstoneTools.angle.enable(element);
       cornerstoneTools.highlight.enable(element);
-      this.activate("enableWindowLevelTool");
     });
   };
   enableTool = (toolName, mouseButtonNumber) => {
-    this.activate(toolName);
     this.disableAllTools();
     cornerstoneTools[toolName].activate(this.dicomImage, mouseButtonNumber);
-  };
-  activate = id => {
-    this.setState({ activeTool: id });
   };
   // helper function used by the tool button handlers to disable the active tool
   // before making a new tool active
