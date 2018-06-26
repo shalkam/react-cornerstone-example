@@ -3,14 +3,15 @@ import Hammer from "hammerjs";
 import * as cornerstone from "cornerstone-core";
 import * as cornerstoneTools from "cornerstone-tools";
 import * as cornerstoneMath from "cornerstone-math";
-import exampleImageIdLoader from "./exampleImageIdLoader";
+import dicomLoader from "./dicom-loader";
+// import exampleImageIdLoader from "./exampleImageIdLoader";
 
 class DicomViewer extends React.Component {
   componentWillMount() {
     cornerstoneTools.external.cornerstone = cornerstone;
     cornerstoneTools.external.cornerstoneMath = cornerstoneMath;
     cornerstoneTools.external.Hammer = Hammer;
-    exampleImageIdLoader(cornerstone);
+    dicomLoader(cornerstone);
   }
   componentDidMount() {
     this.loadImage();
@@ -38,12 +39,12 @@ class DicomViewer extends React.Component {
       preventZoomOutsideImage: true
     };
     cornerstoneTools.zoom.setConfiguration(config);
-    document.getElementById("chkshadow").addEventListener("change", function() {
+    document.getElementById("chkshadow").addEventListener("change", () => {
       cornerstoneTools.length.setConfiguration({ shadow: this.checked });
       cornerstoneTools.angle.setConfiguration({ shadow: this.checked });
       cornerstone.updateImage(element);
     });
-    const imageId = "example://2";
+    const imageId = "example://1";
     cornerstone.enable(element);
     cornerstone.loadImage(imageId).then(image => {
       cornerstone.displayImage(element, image);
