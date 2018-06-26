@@ -2,7 +2,7 @@
   "name": "react-cornerstone-example",
   "version": "0.1.0",
   "private": true,
-  "homepage" : "https://shalkam.github.io/react-cornerstone-example",
+  "homepage": "https://shalkam.github.io/react-cornerstone-example",
   "dependencies": {
     "bootstrap": "^4.0.0",
     "cornerstone-core": "^2.1.0",
@@ -30,6 +30,7 @@
     "eslint-plugin-jsx-a11y": "^6.0.3",
     "eslint-plugin-prettier": "^2.6.0",
     "eslint-plugin-react": "^7.6.1",
+    "gh-pages": "^1.2.0",
     "prettier": "^1.10.2"
   }
 }
